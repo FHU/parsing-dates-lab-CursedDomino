@@ -24,7 +24,7 @@ def parse_month(month):
     elif month == 'December':
         return '12'
     else:
-        print('Something went wrong.')
+        print("Something went wrong.")
 
 
 date = input()
