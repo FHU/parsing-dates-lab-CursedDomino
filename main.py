@@ -33,7 +33,7 @@ def parse_date(user_string):
     if int(day) < 10:
         day = '0' + day
 
-    year = date[date.index(',') + 2:]
+    year = user_string[user_string.index(',') + 2:]
 
     return f'{parse_month(month)}/{day}/{year}'
 
