@@ -26,12 +26,21 @@ def parse_month(month):
     else:
         print('Something went wrong.')
 
-#REMOVE PASS AND FIX THIS FUNCTION
-#parse_date function should return the date formated as MM/DD/YYYY
-#DO NOT REMOVE THIS FUNCTION
-def parse_date(user_string):
-    return f'{parse_month(user_string)}/05/2004'
 
-#REMOVE PASS AND YOUR CODE GOES HERE
+date = input()
+
+month = date[0:date.index(' ')]
+
+day = date[date.index(' ') + 1:date.index(',')]
+if int(day) < 10:
+    day = '0' + day
+
+year = date[date.index(',') + 2:]
+
+
+def parse_date(user_string):
+    return f'{parse_month(month)}/{day}/{year}'
+
+
 if __name__ == '__main__':
-    print(parse_date('July'))
+    print(parse_date(date))
