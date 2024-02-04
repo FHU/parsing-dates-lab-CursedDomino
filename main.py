@@ -26,8 +26,6 @@ def parse_month(month):
     else:
         print("Something went wrong.")
 
-date = input()
-
 def parse_date(user_string):
     month = date[0:date.index(' ')]
 
@@ -39,6 +37,11 @@ def parse_date(user_string):
 
     return f'{parse_month(month)}/{day}/{year}'
 
+date = 0
 
 if __name__ == '__main__':
-    print(parse_date(date))
+    while True:
+        date = input()
+        if date == '-1':
+            break
+        print(parse_date(date))
