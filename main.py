@@ -29,16 +29,15 @@ def parse_month(month):
 
 date = input()
 
-month = date[0:date.index(' ')]
-
-day = date[date.index(' ') + 1:date.index(',')]
-if int(day) < 10:
-    day = '0' + day
-
-year = date[date.index(',') + 2:]
-
-
 def parse_date(user_string):
+    month = date[0:date.index(' ')]
+
+    day = date[date.index(' ') + 1:date.index(',')]
+    if int(day) < 10:
+        day = '0' + day
+
+    year = date[date.index(',') + 2:]
+
     return f'{parse_month(month)}/{day}/{year}'
 
 
