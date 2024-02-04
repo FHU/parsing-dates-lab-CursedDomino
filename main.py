@@ -27,9 +27,9 @@ def parse_month(month):
         print("Something went wrong.")
 
 def parse_date(user_string):
-    month = date[0:date.index(' ')]
+    month = user_string[0:user_string.index(' ')]
 
-    day = date[date.index(' ') + 1:date.index(',')]
+    day = user_string[user_string.index(' ') + 1:user_string.index(',')]
     if int(day) < 10:
         day = '0' + day
 
