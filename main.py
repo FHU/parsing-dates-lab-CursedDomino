@@ -26,9 +26,6 @@ def parse_month(month):
     else:
         print("Something went wrong.")
 
-
-date = input()
-
 def parse_date(user_string):
     month = date[0:date.index(' ')]
 
