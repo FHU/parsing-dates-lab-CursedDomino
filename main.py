@@ -37,7 +37,6 @@ def parse_date(user_string):
 
     return f'{parse_month(month)}/{day}/{year}'
 
-
 if __name__ == '__main__':
     while True:
         date = input()
